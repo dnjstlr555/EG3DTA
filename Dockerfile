@@ -3,7 +3,7 @@ FROM pytorch/pytorch:2.1.2-cuda11.8-cudnn8-devel
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -y git && \
+    apt-get install -y git libgl1-mesa-glx libglib2.0-0 && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install -U openmim && \

@@ -5,10 +5,23 @@ Official PyTorch implementation of the paper **"Efficient Graph 3D Convolution N
 
 
 ## Installation
-Use dockerfile to automatically set up the environment, or follow the instructions below to manually set up the environment:
+Use dockerfile to automatically set up the environment:
 ```bash
 # Clone this repository
-git clone [https://github.com/dnjstlr555/EG3DTA.git](https://github.com/dnjstlr555/EG3DTA.git)
+git clone https://github.com/dnjstlr555/EG3DTA.git
+cd EG3DTA
+
+# Build the Docker image
+docker build -t eg3dta:latest .
+# Run the Docker container to test the installation
+docker run -it --gpus all --shm-size=1g eg3dta:latest
+# To access the container's bash shell, use the following command:
+docker run -it --gpus all --shm-size=1g eg3dta:latest /bin/bash
+```
+or follow the instructions below to manually set up the environment:
+```bash
+# Clone this repository
+git clone https://github.com/dnjstlr555/EG3DTA.git
 cd EG3DTA
 
 # Create a conda environment
