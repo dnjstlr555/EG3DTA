@@ -1,0 +1,9 @@
+__pycache__/
+.git/
+index.txt
+data/*
+!data/kimore/readme.txt
+!data/uiprmd/readme.txt
+
+results/*
+!results/readme.txt
